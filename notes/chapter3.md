@@ -21,8 +21,8 @@
 	2. 乘累加指令madd/maddu：2 cycle
 	3. 乘累减指令msub/msubu：2 cycle
 	4. 其余指令：1 cycle
-4. 接口描述：<br/>![[Pasted image 20241129132636.png]]<br/>
-<br/>![[Pasted image 20241129133253.png]]<br/>
-5. 文件命名，在后续章节会逐一介绍：<br/>![[Pasted image 20241129133446.png]]<br/>
-6. 
+4. 接口描述：<br/>![](https://github.com/wenxxxxfu/OpenMIPS/blob/main/notes/imgs/Pasted%20image%2020241129132636.png)<br/>
+<br/>![](https://github.com/wenxxxxfu/OpenMIPS/blob/main/notes/imgs/Pasted%20image%2020241129133253.png)<br/>
+5. 文件命名，在后续章节会逐一介绍：<br/>![](https://github.com/wenxxxxfu/OpenMIPS/blob/main/notes/imgs/Pasted%20image%2020241129133446.png)<br/>
+   
 	
