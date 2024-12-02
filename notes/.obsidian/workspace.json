@@ -25,6 +25,30 @@
             "id": "0ae7609fc5d75310",
             "type": "leaf",
             "state": {
+              "type": "image",
+              "state": {
+                "file": "imgs/Pasted image 20241129144759.png"
+              },
+              "icon": "lucide-image",
+              "title": "Pasted image 20241129144759"
+            }
+          },
+          {
+            "id": "4d9b7722e03726c6",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "imgs/Pasted image 20241129145759.png"
+              },
+              "icon": "lucide-image",
+              "title": "Pasted image 20241129145759"
+            }
+          },
+          {
+            "id": "fc89bf498dbb949a",
+            "type": "leaf",
+            "state": {
               "type": "markdown",
               "state": {
                 "file": "chapter4 ori指令.md",
@@ -50,7 +74,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -191,15 +215,15 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "0ae7609fc5d75310",
+  "active": "fc89bf498dbb949a",
   "lastOpenFiles": [
-    "Pasted image 20241129145759.png",
-    "Pasted image 20241129144759.png",
-    "imgs/Pasted image 20241129144223.png",
-    "chapter4 ori指令.md",
     "chapter3 设计目标.md",
-    "imgs/Pasted image 20241129142202.png",
     "chapter1-2 简介.md",
+    "chapter4 ori指令.md",
+    "imgs/Pasted image 20241129145759.png",
+    "imgs/Pasted image 20241129144759.png",
+    "imgs/Pasted image 20241129144223.png",
+    "imgs/Pasted image 20241129142202.png",
     "imgs/Pasted image 20241129133253.png",
     "imgs/Pasted image 20241129133446.png",
     "imgs/Pasted image 20241129132636.png",
