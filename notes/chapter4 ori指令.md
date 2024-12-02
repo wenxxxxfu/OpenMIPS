@@ -24,3 +24,11 @@ ori指令通过原始的数据流图所表示的数据流向即可完成操作�
 
 **原始的OpenMIPS五级流水线系统结构图**：
 ![image](https://github.com/zach0zhang/Single_instruction_cycle_OpenMIPS/blob/master/ori/md_images/system_struct_ori.png)
+
+## 手动编译
+- 编写inst_rom.data以及testbench
+- 波形文件保存在./wave文件夹
+
+## 自动编译
+ - mips编译器和模拟器/mips GCC编译环境搭建:https://blog.csdn.net/wfxzf/article/details/88974144
+- 波形文件保存在./wave文件夹
