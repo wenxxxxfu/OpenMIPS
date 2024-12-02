@@ -24,14 +24,3 @@ ori指令通过原始的数据流图所表示的数据流向即可完成操作�
 
 **原始的OpenMIPS五级流水线系统结构图**：
 ![image](https://github.com/zach0zhang/Single_instruction_cycle_OpenMIPS/blob/master/ori/md_images/system_struct_ori.png)
-## 单指令周期ori指令的实现
-五级流水线的好处是通过多个硬件处理单元并行执行来加快指令的执行速度，但是抱着学习计算机组成原理而言不需要实现高超的处理器性能，主旨实现指令功能和处理器工作原理，将五级流水线合成单指令周期执行。
-
-单指令周期执行ori指令，不用考虑数据相关问题，每一条指令都在一个指令周期完成，即在一个指令周期完成取指、译码、执行、访存、回写等五个步骤
-
-由于ori在访存阶段并没有任何操作，直接将运算结果传递回写阶段，则在此处省略掉这一阶段
-
-**单指令周期在第一个时钟开始执行取指、译码、执行，在第二个时钟执行回写阶段**
-
-**单指令周期系统结构图：**
-![image](https://github.com/zach0zhang/Single_instruction_cycle_OpenMIPS/blob/master/ori/md_images/ori_new.png)
