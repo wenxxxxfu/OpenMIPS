@@ -1,18 +1,15 @@
 MEMORY
         {
-       
         ram    : ORIGIN = 0x00000000, LENGTH = 0x00001000
         }
 
 SECTIONS
 {
-	  /*
-	  For some reason the linker script can't see the _reset_vector symbol 
-	  (even if we declare it global), so we explicitly set it. */
+  /*
+  For some reason the linker script can't see the _reset_vector symbol 
+  (even if we declare it global), so we explicitly set it. */
 
-	
-
-	.text :
+        .text :
         {
         *(.text)
         } > ram

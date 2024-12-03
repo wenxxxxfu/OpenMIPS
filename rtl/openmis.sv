@@ -86,6 +86,15 @@ module openmips(
 		.reg1_data_i(reg1_data),
 		.reg2_data_i(reg2_data),
 
+        		
+        .ex_wreg_i      (ex_wreg_o),
+        .ex_wdata_i     (ex_wdata_o),
+        .ex_waddr_i     (ex_waddr_o),
+        .mem_wreg_i     (mem_wreg_o),
+        .mem_wdata_i    (mem_wdata_o),
+        .mem_waddr_i    (mem_waddr_o),
+
+
 		//送到regfile的信息
 		.reg1_ren_o (reg1_ren),
 		.reg2_ren_o (reg2_ren), 	  
@@ -106,7 +115,8 @@ module openmips(
 	id_ex id_ex0(
 		.clk            (clk),
 		.rst            (rst),
-		
+
+
 		//从译码阶段ID模块传递的信息
 		.id_aluop       (id_aluop_o),
 		.id_alusel      (id_alusel_o),

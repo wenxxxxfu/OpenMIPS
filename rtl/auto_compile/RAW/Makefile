@@ -25,6 +25,6 @@ inst_rom.bin: inst_rom.om
 inst_rom.asm: inst_rom.om
 	$(OBJDUMP) -D $< > $@
 inst_rom.data: inst_rom.bin
-	hexdump -v -e '1/1 "%02x"' $< > $@
+	../Bin2Mem.exe -f $<  -o $@
 clean:
 	rm -f *.o *.om *.bin *.data *.mif *.asm
