@@ -73,69 +73,123 @@ always_comb begin
                     5'b00000:begin
                         case (op3)
                             `EXE_OR:begin
-                                wreg_o <= `WriteEnable;
-                                aluop_o <= `EXE_OR_OP;
-                                alusel_o <= `EXE_RES_LOGIC;
-                                reg1_ren_o <= 1'b1;
-                                reg2_ren_o <= 1'b1;
-                                inst_vld <= `InstValid;	
+                                wreg_o      <= `WriteEnable;
+                                aluop_o     <= `EXE_OR_OP;
+                                alusel_o    <= `EXE_RES_LOGIC;
+                                reg1_ren_o  <= 1'b1;
+                                reg2_ren_o  <= 1'b1;
+                                inst_vld    <= `InstValid;	
                                 end
                             `EXE_AND:begin
-                                wreg_o <= `WriteEnable;
-                                aluop_o <= `EXE_AND_OP;
-                                alusel_o <= `EXE_RES_LOGIC;
-                                reg1_ren_o <= 1'b1;
-                                reg2_ren_o <= 1'b1;
-                                inst_vld <= `InstValid;
+                                wreg_o      <= `WriteEnable;
+                                aluop_o     <= `EXE_AND_OP;
+                                alusel_o    <= `EXE_RES_LOGIC;
+                                reg1_ren_o  <= 1'b1;
+                                reg2_ren_o  <= 1'b1;
+                                inst_vld    <= `InstValid;
                                 end 
                             `EXE_XOR:	begin
-                                wreg_o <= `WriteEnable;
-                                aluop_o <= `EXE_XOR_OP;
-                                alusel_o <= `EXE_RES_LOGIC;
-                                reg1_ren_o <= 1'b1;
-                                reg2_ren_o <= 1'b1;
-                                inst_vld <= `InstValid;
+                                wreg_o      <= `WriteEnable;
+                                aluop_o     <= `EXE_XOR_OP;
+                                alusel_o    <= `EXE_RES_LOGIC;
+                                reg1_ren_o  <= 1'b1;
+                                reg2_ren_o  <= 1'b1;
+                                inst_vld    <= `InstValid;
                                 end
                             `EXE_NOR:begin
-                                wreg_o <= `WriteEnable;
-                                aluop_o <= `EXE_NOR_OP;
-                                alusel_o <= `EXE_RES_LOGIC;
-                                reg1_ren_o <= 1'b1;
-                                reg2_ren_o <= 1'b1;
-                                inst_vld <= `InstValid;
+                                wreg_o      <= `WriteEnable;
+                                aluop_o     <= `EXE_NOR_OP;
+                                alusel_o    <= `EXE_RES_LOGIC;
+                                reg1_ren_o  <= 1'b1;
+                                reg2_ren_o  <= 1'b1;
+                                inst_vld    <= `InstValid;
                                 end 
                             `EXE_SLLV: begin
-                                wreg_o <= `WriteEnable;
-                                aluop_o <= `EXE_SLL_OP;
-                                alusel_o <= `EXE_RES_SHIFT;
-                                reg1_ren_o <= 1'b1;
-                                reg2_ren_o <= 1'b1;
-                                inst_vld <= `InstValid;
+                                wreg_o      <= `WriteEnable;
+                                aluop_o     <= `EXE_SLL_OP;
+                                alusel_o    <= `EXE_RES_SHIFT;
+                                reg1_ren_o  <= 1'b1;
+                                reg2_ren_o  <= 1'b1;
+                                inst_vld    <= `InstValid;
                                 end
                             `EXE_SRLV: begin
-                                wreg_o <= `WriteEnable;
-                                aluop_o <= `EXE_SRL_OP;
-                                alusel_o <= `EXE_RES_SHIFT;
-                                reg1_ren_o <= 1'b1;
-                                reg2_ren_o <= 1'b1;
-                                inst_vld <= `InstValid;
+                                wreg_o      <= `WriteEnable;
+                                aluop_o     <= `EXE_SRL_OP;
+                                alusel_o    <= `EXE_RES_SHIFT;
+                                reg1_ren_o  <= 1'b1;
+                                reg2_ren_o  <= 1'b1;
+                                inst_vld    <= `InstValid;
                                 end
                             `EXE_SRAV: begin
-                                wreg_o <= `WriteEnable;
-                                aluop_o <= `EXE_SRA_OP;
-                                alusel_o <= `EXE_RES_SHIFT;
-                                reg1_ren_o <= 1'b1;
-                                reg2_ren_o <= 1'b1;
-                                inst_vld <= `InstValid;
+                                wreg_o      <= `WriteEnable;
+                                aluop_o     <= `EXE_SRA_OP;
+                                alusel_o    <= `EXE_RES_SHIFT;
+                                reg1_ren_o  <= 1'b1;
+                                reg2_ren_o  <= 1'b1;
+                                inst_vld    <= `InstValid;
                                 end	
                             `EXE_SYNC: begin
-                                wreg_o <= `WriteDisable;
-                                aluop_o <= `EXE_NOP_OP;
-                                alusel_o <= `EXE_RES_NOP;
-                                reg1_ren_o <= 1'b0;
+                                wreg_o      <= `WriteDisable;
+                                aluop_o     <= `EXE_NOP_OP;
+                                alusel_o    <= `EXE_RES_NOP;
+                                reg1_ren_o  <= 1'b0;
+                                reg2_ren_o  <= 1'b1;
+                                inst_vld    <= `InstValid;
+                                end	
+                            `EXE_MFHI: begin
+                                wreg_o      <= `WriteEnable;
+                                aluop_o     <= `EXE_MFHI_OP;
+                                alusel_o    <= `EXE_RES_MOVE;
+                                reg1_ren_o  <= 1'b0;
+                                reg2_ren_o  <= 1'b0;
+                                inst_vld    <= `InstValid;	
+								end	
+                            `EXE_MFLO: begin
+                                wreg_o      <= `WriteEnable;	
+                                aluop_o     <= `EXE_MFLO_OP;
+                                alusel_o    <= `EXE_RES_MOVE;
+                                reg1_ren_o  <= 1'b0;
+                                reg2_ren_o  <= 1'b0;
+		  						inst_vld    <= `InstValid;	
+								end
+							`EXE_MTHI: begin
+                                wreg_o      <= `WriteDisable;
+                                aluop_o     <= `EXE_MTHI_OP;
+                                reg1_ren_o  <= 1'b1;
+                                reg2_ren_o  <= 1'b0;
+                                inst_vld    <= `InstValid;	
+								end
+							`EXE_MTLO: begin
+                                wreg_o      <= `WriteDisable;
+                                aluop_o     <= `EXE_MTLO_OP;
+                                reg1_ren_o  <= 1'b1;
+                                reg2_ren_o  <= 1'b0;
+                                inst_vld    <= `InstValid;	
+								end
+							`EXE_MOVN: begin
+                                aluop_o     <= `EXE_MOVN_OP;
+                                alusel_o    <= `EXE_RES_MOVE;
+                                reg1_ren_o  <= 1'b1;
+                                reg2_ren_o  <= 1'b1;
+                                inst_vld    <= `InstValid;
+                                if(reg2_data_o != `ZeroWord) begin
+                                    wreg_o  <= `WriteEnable;
+                                end else begin
+                                    wreg_o  <= `WriteDisable;
+                                end
+							    end
+							`EXE_MOVZ: begin
+                                aluop_o <= `EXE_MOVZ_OP;
+                                alusel_o <= `EXE_RES_MOVE;
+                                reg1_ren_o <= 1'b1;
                                 reg2_ren_o <= 1'b1;
-                                inst_vld <= `InstValid;
-                                end					
+                                inst_vld  <= `InstValid;
+                                if(reg2_data_o == `ZeroWord) begin
+                                    wreg_o <= `WriteEnable;
+                                end else begin
+                                    wreg_o <= `WriteDisable;
+                                end		  							
+								end		  								
                             default:begin
                             
                              end

@@ -12,3 +12,4 @@
 ../rtl/pc_reg.sv
 ../rtl/regfile.sv
 ../rtl/openmis.sv
+../rtl/hilo_reg.sv
