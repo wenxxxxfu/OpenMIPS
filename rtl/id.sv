@@ -142,31 +142,31 @@ always_comb begin
                                 alusel_o    <= `EXE_RES_MOVE;
                                 reg1_ren_o  <= 1'b0;
                                 reg2_ren_o  <= 1'b0;
-                                inst_vld    <= `InstValid;	
-								end	
+                                inst_vld    <= `InstValid;
+                                end	
                             `EXE_MFLO: begin
                                 wreg_o      <= `WriteEnable;	
                                 aluop_o     <= `EXE_MFLO_OP;
                                 alusel_o    <= `EXE_RES_MOVE;
                                 reg1_ren_o  <= 1'b0;
                                 reg2_ren_o  <= 1'b0;
-		  						inst_vld    <= `InstValid;	
-								end
-							`EXE_MTHI: begin
+                                inst_vld    <= `InstValid;
+                                end
+                            `EXE_MTHI: begin
                                 wreg_o      <= `WriteDisable;
                                 aluop_o     <= `EXE_MTHI_OP;
                                 reg1_ren_o  <= 1'b1;
                                 reg2_ren_o  <= 1'b0;
-                                inst_vld    <= `InstValid;	
-								end
-							`EXE_MTLO: begin
+                                inst_vld    <= `InstValid;
+                                end
+                            `EXE_MTLO: begin
                                 wreg_o      <= `WriteDisable;
                                 aluop_o     <= `EXE_MTLO_OP;
                                 reg1_ren_o  <= 1'b1;
                                 reg2_ren_o  <= 1'b0;
-                                inst_vld    <= `InstValid;	
-								end
-							`EXE_MOVN: begin
+                                inst_vld    <= `InstValid;
+                                end
+                            `EXE_MOVN: begin
                                 aluop_o     <= `EXE_MOVN_OP;
                                 alusel_o    <= `EXE_RES_MOVE;
                                 reg1_ren_o  <= 1'b1;
@@ -177,8 +177,8 @@ always_comb begin
                                 end else begin
                                     wreg_o  <= `WriteDisable;
                                 end
-							    end
-							`EXE_MOVZ: begin
+                                end
+                            `EXE_MOVZ: begin
                                 aluop_o <= `EXE_MOVZ_OP;
                                 alusel_o <= `EXE_RES_MOVE;
                                 reg1_ren_o <= 1'b1;
@@ -188,8 +188,8 @@ always_comb begin
                                     wreg_o <= `WriteEnable;
                                 end else begin
                                     wreg_o <= `WriteDisable;
-                                end		  							
-								end		  								
+                                end
+                                end		  								
                             default:begin
                             
                              end
