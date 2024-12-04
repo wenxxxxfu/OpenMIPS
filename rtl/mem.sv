@@ -28,7 +28,7 @@ module mem(
 		if(rst == `RstEnable) begin
 			waddr_o <= `NOPRegAddr;
 			wreg_o 	<= `WriteDisable;
-		    wdata_o <= `ZeroWord;
+			wdata_o <= `ZeroWord;
 			hi_o 	<= `ZeroWord;
 		  	lo_o 	<= `ZeroWord;
 		  	whilo_o <= `WriteDisable;		  
