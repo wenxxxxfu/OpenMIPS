@@ -1,0 +1,10 @@
+*design* DebussyLib (btIdent Verdi3_L-2016.06-1)
+Command arguments:
+    +define+verilog
+    -kdb
+*Warning* Unknown argument -kdb
+
+
+*Error* no source file
+
+Total	1 error(s),   1 warning(s)

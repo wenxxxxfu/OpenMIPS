@@ -24,7 +24,7 @@ module openmips_min_sopc_tb();
 		.rst(rst)	
 	);
     initial	begin
-        $fsdbDumpfile("./wave/move.fsdb");//这个是产生名为tb.fsdb的文件
+        $fsdbDumpfile("./wave/arithmetic.fsdb");//这个是产生名为tb.fsdb的文件
         $fsdbDumpMDA();
         $fsdbDumpvars;
     end

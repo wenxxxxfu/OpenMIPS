@@ -286,6 +286,6 @@ module openmips(
     );
 
  
-    
+
 
 endmodule
