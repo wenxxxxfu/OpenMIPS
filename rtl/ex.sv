@@ -135,10 +135,10 @@ module ex(
 
 //取得乘法操作的操作数，如果是有符号除法且操作数是负数，那么取反加一
 	assign opdata1_mult = (((aluop_i == `EXE_MUL_OP) || (aluop_i == `EXE_MULT_OP))
-													&& (reg1_data_i[31] == 1'b1)) ? (~reg1_data_i + 1) : reg1_data_i;
+                        && (reg1_data_i[31] == 1'b1)) ? (~reg1_data_i + 1) : reg1_data_i;
 
     assign opdata2_mult = (((aluop_i == `EXE_MUL_OP) || (aluop_i == `EXE_MULT_OP))
-													&& (reg2_data_i[31] == 1'b1)) ? (~reg2_data_i + 1) : reg2_data_i;		
+                        && (reg2_data_i[31] == 1'b1)) ? (~reg2_data_i + 1) : reg2_data_i;		
 
     assign hilo_temp = opdata1_mult * opdata2_mult;																				
 
@@ -168,8 +168,8 @@ module ex(
 			`EXE_RES_LOGIC:wdata_o <= logicout;
 			`EXE_RES_SHIFT:wdata_o <= shiftres;
 			`EXE_RES_MOVE: wdata_o <= moveres;
-            `EXE_RES_ARITHMETIC:wdata_o <= arithmeticres;
-            `EXE_RES_MUL:  wdata_o <= mulres[31:0];
+			`EXE_RES_ARITHMETIC:wdata_o <= arithmeticres;
+			`EXE_RES_MUL:  wdata_o <= mulres[31:0];
 			default:	   wdata_o <=`ZeroWord;
 		endcase
 	end	
